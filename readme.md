@@ -1,4 +1,4 @@
-echo "item1" >> readme.md
+﻿echo "item1" >> readme.md
 git init
 git add readme.md
 git commit -m "Ver1"
