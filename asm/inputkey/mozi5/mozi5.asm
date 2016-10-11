@@ -1,15 +1,16 @@
 bits 16
-org 0x100
-global main
-main:
-	;welcome"
+org 100h
+
+global start
+
+start:
 	mov ah,9
-	mov dx,welcome
+	mov dx,hello
 	int 21h
 	
-	jmp test
-	
+	jmp mozi
+mozi:
+	jmp print
 
-welcome db "OK.",0dh,0ah,'$'
-
+hello db "Hello", 0dh,0ah,'$'
 %include "print.asm"

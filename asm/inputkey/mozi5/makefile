@@ -1,2 +1,2 @@
 install:
-	nasm -f bin mozi5.asm -o mozi5.com
+	nasm -f bin -o mozi5.com mozi5.asm
