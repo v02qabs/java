@@ -1,0 +1,3 @@
+#Run internal java dex classloader
+
+dalvikvm -cp $1 $2
