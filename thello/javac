@@ -1,0 +1,1 @@
+dalvikvm -Xss262912 -Xmx64m $@
