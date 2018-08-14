@@ -1,0 +1,6 @@
+#!/data/data/com.termux/files/usr/bin/sh
+
+exec dalvikvm \
+	-Xmx256m \
+	-cp /data/data/com.termux/files/usr/share/dex/dx.jar \
+	dx.dx.command.Main $@
