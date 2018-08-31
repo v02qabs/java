@@ -1,0 +1,30 @@
+import java.io.*;
+
+public class Main
+{
+    public Main()
+    {
+    }
+    public static void main(String[] args)
+    {
+	System.out.println("File Name is : " + args[1]);
+	Main m = new Main();
+	m.getLength(args[1]);
+    }
+    public void getLength(String args)
+    {
+ 	System.out.println("File is : " + args[1]);
+ 	String FName = args;
+ 	System.out.println(FName);
+ 	File f = new File(FName);
+ 	try
+ 	    {
+ 		f.length(FName);
+ 	    }
+ 	catch(Exception error)
+ 	    {
+ 		System.out.println(error.toString());
+ 	    }
+     }
+
+}

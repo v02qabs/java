@@ -1,0 +1,16 @@
+class Main
+{
+    public Main()
+    {
+	initlize();
+    }
+    
+    public static void main(String[] args)
+    {
+	new Main();
+    }
+    public void initalize()
+    {
+	test.Message = "Japan.";
+	
+}

@@ -1,0 +1,7 @@
+public class test
+{
+    public static String message;
+    public void echoMessage()
+    {
+	System.out.println(message);
+}
