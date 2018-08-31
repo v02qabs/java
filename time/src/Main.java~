@@ -1,0 +1,21 @@
+import java.io.*;
+import java.text.*;
+import java.util.*;
+
+public class Main
+{
+    public Main()
+    {
+    }
+    public static void main(String[] args)
+    {
+	System.out.println("time...");
+	Main m = new Main();
+	m.settime();
+    }
+    public void settime()
+    {
+	DateFormat df3 = DateFormat.getDateTimeInstance(DateFormat.LONG, DateFormat.MEDIUM);
+	System.out.println(df3.format(new Date()));
+     }
+}
