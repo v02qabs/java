@@ -1,0 +1,2 @@
+#javac helper script
+ecj $@
