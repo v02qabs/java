@@ -1,1 +1,0 @@
-dx --dex --no-strict --no-warning --verbose $@
