@@ -1,0 +1,7 @@
+cd ./src
+
+ecj package/*.java -d ../bin
+
+cd ../bin
+
+dx --dex --output=../dist/Main.jar ./package/*.class
