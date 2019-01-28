@@ -1,7 +1,0 @@
-cd ./src
-
-ecj hiro/*.java -d ../bin
-
-cd ../bin
-
-dx --dex --output=../dist/Main.jar ./hiro/*.class

@@ -1,7 +1,0 @@
-#/data/data/com.termux/files/home/java/ftp-java/ftp4j/1.0/ftp4j-1.0/ftp.jar
-cd ./src
-ecj *.java -cp ../lib/*.jar -d ../bin
-cd ../bin
-dx --dex --output=../dist/Main.jar ../lib/*.jar *.class
-cd ../dist
-dalvikvm -cp Main.jar Main

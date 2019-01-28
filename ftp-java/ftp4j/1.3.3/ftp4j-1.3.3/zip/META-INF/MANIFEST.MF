@@ -1,5 +1,0 @@
-Manifest-Version: 1.0
-Created-By: 11.0-b16 (Sun Microsystems Inc.) + dx 1.16
-Dex-Location: classes.dex
-Ant-Version: Apache Ant 1.7.1
-

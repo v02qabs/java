@@ -1,3 +1,0 @@
-cd ./dist
-
-dalvikvm -cp Main.jar hiro.Main
