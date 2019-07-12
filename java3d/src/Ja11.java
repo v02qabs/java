@@ -4,7 +4,7 @@ import javax.media.j3d.*;
 import com.sun.j3d.utils.applet.*;
 import com.sun.j3d.utils.universe.*;
 
-public class ja1 extends Applet
+public class Ja11 extends JApplet
 {
 	private SimpleUniverse simpleU;
 
@@ -12,17 +12,19 @@ public class ja1 extends Applet
 	{
 		setLayout(new BorderLayout());
 		Canvas3D canvas = new Canvas3D(SimpleUniverse.getPreferredConfiguration());
-		add(canvas, BorderLayout.CENTER);
-		simpleU = new SimpleUniverse(canvas);
+
+		add(canvas, BorderLayout.CENETER);
+		simpleU = new SimpleUniverse(canvas);	
 		simpleU.getViewingPlatform().setNominalViewingTransform();
 	}
+
 	public void destroy()
 	{
 		simpleU.cleanup();
 	}
 	public static void main(String[] args)
 	{
-		MainFrame main = new MainFrame(new ja1(), 512,512);
+		MainFrame frame = new MainFrame(new Ja11(), 512,512);
 	}
 }
 
