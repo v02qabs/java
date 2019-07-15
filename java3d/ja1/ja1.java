@@ -20,9 +20,5 @@ public class ja1 extends Applet
 	{
 		simpleU.cleanup();
 	}
-	public static void main(String[] args)
-	{
-		MainFrame main = new MainFrame(new ja1(), 512,512);
-	}
 }
 
