@@ -26,13 +26,13 @@ public class ja3 extends Applet
 	private BranchGroup createSceneGraph()
 	{
 		BranchGroup group = new BranchGroup();
-		Background back = new Background(new Color3f(0.3f, 0.3f, 0.3f));
+		Background back = new Background(new Color3f(0.0f, 0.0f, 0.0f));
 		back.setApplicationBounds(bounds);
 		group.addChild(back);
 		Point3f[] point = new Point3f[2];
 		Color3f[] color = new Color3f[2];
 		point[0] = new Point3f(0.0f, 0.3f, 0.0f);
-		point[1] = new Point3f(0.5f, 0.3f, 0.0f);
+		point[1] = new Point3f(0.5f, 0.1f, 0.0f);
 		color[0] = new Color3f(1.0f, 0.0f, 0.0f);
 		color[1] = new Color3f(1.0f, 0.0f, 0.0f);
 
