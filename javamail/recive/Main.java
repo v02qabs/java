@@ -11,6 +11,7 @@ import javax.mail.Session;
 import javax.mail.Store;
 import javax.mail.Message.RecipientType;
 import javax.mail.internet.InternetAddress;
+import java.io.*;
 
 /**
  * シンプルなメール受信サンプル。
@@ -96,7 +97,15 @@ public class Main {
                         // このAPI利用範囲であれば TOPコマンド止まりで、RETRコマンドは送出されない。
 
                         System.out.println("Subject: " + message.getSubject());
-                        System.out.println("  Date: " + message.getSentDate().toString());
+                        System.out.println("Date: " + message.getSentDate().toString());
+						try
+						{
+							System.out.println("Message: " + message.getContent().toString());
+						}
+						catch(IOException error)
+						{
+							System.out.println("Can not get Content.");
+						}
 
                         // TODO 0番目の配列アクセスをおこなっている点に注意。
                         final InternetAddress addrFrom = (InternetAddress) message.getFrom()[0];
@@ -109,6 +118,7 @@ public class Main {
                         for (int loop = 0; loop < addrsTo.length; loop++) {
                             final InternetAddress addrTo = (InternetAddress) addrsTo[loop];
                             System.out.println("  To: " + addrTo.getAddress());
+							
                         }
 
                         // Cc:は割愛
