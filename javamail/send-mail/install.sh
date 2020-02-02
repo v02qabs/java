@@ -1,2 +1,2 @@
-javac -cp ../lib/java-mail.jar: Main.java
+javac -cp ../lib/java-mail.jar: *.java
 

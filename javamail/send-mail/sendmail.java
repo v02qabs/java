@@ -42,7 +42,7 @@ public class sendmail
 	
         final Session session = Session.getInstance(props, new Authenticator() {
             protected PasswordAuthentication getPasswordAuthentication() {
-                return new PasswordAuthentication("z1bcde", "9fqfiz696");
+                return new PasswordAuthentication("z1bcde", "GqPs1#9#");
             }
         });
 
