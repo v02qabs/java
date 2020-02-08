@@ -46,7 +46,6 @@ public class Select
 		}
 		catch(java.lang.NullPointerException error)
 		{
-		break;
 		}
 	}
 
