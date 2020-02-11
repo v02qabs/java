@@ -1,15 +1,19 @@
-import javax.swing.JFrame;
+import java.io.*;
+import java.awt.*;
 
-public class Main extends JFrame{
-
-	public static void main(String[] args) {
-		// TODO 自動生成されたメソッド・スタブ
-			new Main();
-	}
-	public Main()
+public class Main
+{
+	public static void main(String[] args)
 	{
-		setBounds(0,0,500,500);
-		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setVisible(true);
+		System.out.println("Hello.");
+		new Main().Init();
+	}
+	public void Init()
+	{
+		Frame f = new Frame();
+		f.setTitle("Hello.");
+		f.setBounds(0,0,500,500);
+		f.setVisible(true);
 	}
 }
+
