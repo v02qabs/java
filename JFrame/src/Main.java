@@ -1,5 +1,5 @@
 import java.io.*;
-import javax.swing.*;
+import java.awt.*;
 
 public class Main
 {
@@ -10,7 +10,8 @@ public class Main
 	}
 	public void Init()
 	{
-		JFrame f = new JFrame();
+		Frame f = new Frame();
+		f.setTitle("Hello.");
 		f.setBounds(0,0,500,500);
 		f.setVisible(true);
 	}
