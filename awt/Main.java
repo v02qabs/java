@@ -14,6 +14,6 @@ public class Main extends Frame
         setLayout(new FlowLayout());
         Button b1 = new Button("OK");
         add(b1);
-        show();
+        setVisible(true);
     }
 }
