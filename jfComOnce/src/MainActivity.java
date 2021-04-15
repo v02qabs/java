@@ -98,6 +98,8 @@ class Jftpg
 			System.out.println("zipping...");
 			Runtime r = Runtime.getRuntime();
 			r.exec("zip -r tmp.zip ./");
+			
+			fileUpping(hostname,user,password, "tmp.zip" ,rootdir);
 		}
 		catch(Exception error)
 		{
@@ -105,8 +107,27 @@ class Jftpg
 		}
 	}
 		
-	private void fileUpping()
+	private void fileUpping(String hostname, String user, String password, String uploadfiles, String rootdir)
 	{
-		
+		try
+		{
+			it.sauronsoftware.ftp4j.FTPClient client = new it.sauronsoftware.ftp4j.FTPClient();
+			client.connect(hostname);
+			client.login(user, password);
+			//client.setType(it.sauronsoftware.ftp4j.FTPClient.TYPE_BINARY);
+			File upfile = new File(uploadfiles);
+			client.changeDirectory(rootdir);
+			client.upload(upfile);
+			System.out.println("転送成功");
+			client.disconnect(true);
+	
+		}
+		catch(Exception error)
+		{
+			System.out.println(error.toString());
+		}
+ 
+	}
+
 }
 
