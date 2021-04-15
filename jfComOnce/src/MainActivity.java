@@ -1,6 +1,6 @@
 import java.io.*;
-import java.util.Date;
-
+import java.util.*;
+import java.lang.Runtime;
 public class MainActivity
 {
 	public MainActivity()
@@ -11,6 +11,8 @@ class Jftpg
 {
 	
 
+	public Jftpg()
+	{}
 
 	public static void main(String[] args)
 	{
@@ -23,7 +25,8 @@ class Jftpg
 				if(args[0].equals("push"))	
 				{
 						System.out.println("サーバへファイルをアップロードします。");
-
+						
+						new Jftpg().zipping();
 			}
 				
 					if(args[1].equals("."))
@@ -87,6 +90,23 @@ class Jftpg
 				{
 						System.out.println("書き込み失敗");
 				}
-	}		
+		}
+	private void zipping()
+	{
+		try
+		{
+			System.out.println("zipping...");
+			Runtime r = Runtime.getRuntime();
+			r.exec("zip -r tmp.zip ./");
+		}
+		catch(Exception error)
+		{
+			System.out.println("error making zip files");
+		}
+	}
+		
+	private void fileUpping()
+	{
+		
 }
 

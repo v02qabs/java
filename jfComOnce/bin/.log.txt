@@ -43392,3 +43392,11 @@ Thu Apr 15 19:17:23 JST 2021
 ./MainActivity.class
 ./Jftpg.class
 ./.log.txt
+./.log.txt
+./MainActivity.class
+./test/item.txt
+./Jftpg.class
+./.log.txt
+./MainActivity.class
+./test/item.txt
+./Jftpg.class
