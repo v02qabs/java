@@ -1,6 +1,7 @@
 import java.io.*;
 import java.awt.*;
 import java.awt.event.*;
+import javax.swing.*;
 
 public class fchooser extends JFrame
 {
@@ -15,12 +16,17 @@ public class fchooser extends JFrame
 	}
 	JPanel all_panel;
 	JList list;
+	GridLayout layout;
 	private void init()
 	{
+		setBounds(0,0,800,800);
 		all_panel = new JPanel();
 		list = new JList();
 		all_panel.add(list);
-		setLayout(all_panel, new GridLayout(1,1));
+		layout = new GridLayout(1,0);
+		all_panel.setLayout(layout);
+		Container content = getContentPane();
+		content.add(all_panel);
 		setVisible(true);
 	}
 
