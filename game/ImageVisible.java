@@ -34,7 +34,7 @@ public class ImageVisible extends Applet implements Runnable
 	}
 	
 		Random r;
-
+/*
 	
 	public void run()
 {
@@ -46,13 +46,30 @@ public class ImageVisible extends Applet implements Runnable
 		System.out.println(x);
 		repaint();
 		
-		}
+	}
 }
+*/
+
+
+	public void run()
+	{
+		while(true)
+		{	
+				x = x +1;
+				System.out.println("x " + x);
+				sleep();
+				repaint();
+				if(x == 200)
+					break;
+	}
+}
+				
+				
 	private void sleep()
 	{
 			try
 			{
-					new Thread().sleep(8000);
+					new Thread().sleep(80);
 			}
 			catch(Exception error)
 			{}
