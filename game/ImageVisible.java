@@ -34,7 +34,7 @@ public class ImageVisible extends Applet implements Runnable
 	}
 	
 		Random r;
-/*
+
 	
 	public void run()
 {
@@ -47,9 +47,9 @@ public class ImageVisible extends Applet implements Runnable
 		repaint();
 		
 	}
-}
-*/
+	}
 
+/*
 
 	public void run()
 	{
@@ -63,7 +63,7 @@ public class ImageVisible extends Applet implements Runnable
 					break;
 	}
 }
-				
+				*/
 				
 	private void sleep()
 	{
