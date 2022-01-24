@@ -1,6 +1,7 @@
 import org.eclipse.swt.*;
 import org.eclipse.swt.browser.*;
 import org.eclipse.swt.widgets.*;
+import org.eclipse.swt.layout.*;
 
 public class Main
 {
@@ -11,6 +12,9 @@ public class Main
 				Browser browser = new Browser(shell, SWT.NONE);
 				browser.setUrl("http://sn39s.work");
 				browser.setBounds(0,0,500,500);
+				FormData browsData = new FormData();
+				browsData.top = new FormAttachment(1000,0);
+				browser.setLayoutData(browsData);
 				shell.pack();
 				shell.open();
 				
