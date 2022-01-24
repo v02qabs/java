@@ -35,7 +35,7 @@ public class ImageVisible extends Applet implements Runnable
 	
 		Random r;
 
-/*	
+	/*
 	public void run()
 {
 	for(int i=0; i<100; i++)
