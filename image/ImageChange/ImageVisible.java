@@ -41,9 +41,9 @@ public class ImageVisible extends  Frame implements Runnable
 	{
 		imgnum = 0;
 		image = Toolkit.getDefaultToolkit().getImage("icon" + imgnum + ".gif");
-		 tSystem.out.println("NUM: " + imgnum);
+		System.out.println("NUM: " + imgnum);
 		//repaint();
-		imgnum 
+		imgnum = 1;
 		
 		try
 		{
