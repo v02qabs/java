@@ -10,7 +10,7 @@ public class Main
 			Display display = new Display();
 				Shell shell = new Shell(display);
 				Browser browser = new Browser(shell, SWT.NONE);
-				browser.setUrl("http://sn39s.work");
+				browser.setUrl("https://google.co.jp");
 				browser.setBounds(0,0,500,500);
 				FormData browsData = new FormData();
 				browsData.top = new FormAttachment(1000,0);
