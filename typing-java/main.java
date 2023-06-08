@@ -7,7 +7,7 @@ public class main extends JFrame implements KeyListener
 {
 	JLabel label;
 	int loc;
-	String word_string = "hello";
+	String word_string = "hello,string";
 	char word[];
 	public static  void main(String[] args)
 		{
@@ -27,6 +27,8 @@ public class main extends JFrame implements KeyListener
 
 			String[] a_array = word_string.split("");
 
+			try
+			{
 			String str1 = String.valueOf(e.getKeyChar());
 			System.out.println("sa "  + a_array[loc]);
 			System.out.println("str " +  str1);
@@ -38,6 +40,11 @@ public class main extends JFrame implements KeyListener
 
 			System.out.println("OK");
 
+			}
+			catch(Exception error)
+			{
+				System.out.println("error");
+			}
 
 		}
 		private void setWindow()

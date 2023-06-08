@@ -22,54 +22,50 @@ class thpad extends JFrame implements KeyListener
 	panel();
 
 	setVisible(true);
-	typekey();
 
 }
 	private JTextArea journal;
+	private JButton save_button;
+
 		private void panel()
 		{
 		
 			journal = new JTextArea();
+			journal.addKeyListener(this);
 			journal.setBounds(0,0,450,450);
 			JPanel panel = new JPanel();
 			panel.setLayout(null);
+
+			save_button = new JButton("保存");
+			save_button.setBounds(10,460,100,30);
+			
+
 			panel.add(journal);
+			panel.add(save_button);
 			
 			Container content = getContentPane();
 			content.add(panel);
 		}
 
-		private void typekey()
-		{
-			journal.addKeyListener(this);
-		}
-				public void keysave(KeyEvent e){
+		
 
+@Override
+		public void keyPressed(KeyEvent e){
 		if(e.getKeyCode() == Skey && e.isAltDown())
 		{
 			System.out.println("save");
-		try
-		{
-					Runtime run = Runtime.getRuntime();
-					Sting dir = "/";
-					run.exec("java fchooser " + dir);
-			}
-			catch(Exception error)
-			{
-					System.out.println("error");
-			}
-			}
-			}
-			
+		}
+
+	}
+
 		private int Skey = KeyEvent.VK_S;
 		
-	 public void keyTyped(KeyEvent e){}
-		public void keyPressed(KeyEvent e){
-
-			keysave(this.e);
-			}
 			
+	 @Override
+public void keyTyped(KeyEvent e){
+}
 			
+@Override
 		public void keyReleased(KeyEvent e){}
 }
 
