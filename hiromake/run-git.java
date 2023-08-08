@@ -1,4 +1,5 @@
-i<F11>mport java.io.*;
+import java.io.*;
+import java.util.Date;
 
 class RunGit
 {
@@ -15,8 +16,12 @@ class RunGit
 	{
 		try
 		{
-			Process p = Runtime.getRuntime().exec("git --version");
+			Date today = new Date();
+			String time = today.toString();
+			System.out.println(time);
+			Process p = Runtime.getRuntime().exec("git add . & git commit -m \"" + time + "\"" + "& git push");
 			InputStream is = p.getInputStream();
+			printInputStream(is);
 		}
 		catch(Exception error)
 		{
@@ -24,29 +29,25 @@ class RunGit
 		}
 
 
-	}	
+	}
 	private static void printInputStream(InputStream is) throws Exception
-	{	
+	{
 		BufferedReader br = new BufferedReader(new InputStreamReader(is));
 		try
 		{
-			for(;;);
+			for(;;)
 			{
 				String line = br.readLine();
-				if(line==null)
-					break;
-
+					System.out.println(line);
+					if(line == null)
+						System.exit(0);
 			}
+		}
+		
 		catch(Exception error)
 		{
-			System.out.println(error.toString())
+			System.out.println(error.toString());
 		}
-73
-
-
-
-
--	}
+	}
 
 }
-
