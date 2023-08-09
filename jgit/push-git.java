@@ -1,10 +1,10 @@
 import java.io.*;
 import java.util.Date;
 import org.eclipse.jgit.api.*;
-
+import org.eclipse.jgit.transport.ssh.jsch.*;
  
  
-class git_push()
+class git_push
 {
 	private void git_add()
 	{
@@ -24,7 +24,7 @@ class git_push()
 				commit_command.setCommitter("v02qabs", "takesue090@gmail.com").setMessage(time);
 				commit_command.call();
 				System.out.println("commit command success");
-				-
+				
 			}
 			catch(Exception error)
 			{
