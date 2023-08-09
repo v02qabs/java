@@ -1,0 +1,69 @@
+Signature-Version: 1.0
+Created-By: 11.0.18 (Eclipse Adoptium)
+SHA-256-Digest-Manifest: Fq5zz+EJW8SbSt2k3K31o/xiCJwtJqs4bTUsVq6NFi0=
+SHA-256-Digest-Manifest-Main-Attributes: nY5/nmPJ2towHbwqrLuNjfGa7kyv8YE
+ SayYYeKe8Uy0=
+
+Name: org/eclipse/jgit/internal/transport/ssh/jsch/CredentialsProviderUs
+ erInfo.class
+SHA-256-Digest: tmvS4wRK5ecznjUWn+Z7671w9nlPeK19K8AkiXUCHbI=
+
+Name: about.html
+SHA-256-Digest: AlMZFBs6rvv0XZ+LyuiOKiQR3dVCATkdF2ZfFl6CqFI=
+
+Name: org/eclipse/jgit/transport/ssh/jsch/OpenSshConfig$Host.class
+SHA-256-Digest: XGgoya8rYx+KDxlPOBsA+2nD6/+h03JPTZqU9TzkiL4=
+
+Name: org/eclipse/jgit/transport/ssh/jsch/JschSession$JschFtpChannel$2.c
+ lass
+SHA-256-Digest: FrTrom8qUXRQ2yRgedXbT93FhVL3BP1FgNiddTeZt1A=
+
+Name: org/eclipse/jgit/transport/ssh/jsch/package-info.class
+SHA-256-Digest: Bh4qq0v5T9LE3s+yp8V1W2Hnu7X25nc7DzRPsGoN1jo=
+
+Name: org/eclipse/jgit/transport/ssh/jsch/JschSession$JschProcess.class
+SHA-256-Digest: 8c8VbsROdD48sVakhRezbX5uVwLFWeVarp6o3Vf4hjs=
+
+Name: org/eclipse/jgit/transport/ssh/jsch/JschConfigSessionFactory$JschB
+ ugFixingConfigRepository.class
+SHA-256-Digest: lB2c4LVQ8jJx8J8I/iZ0S+aokVVnF6eBuvee/vrRHik=
+
+Name: META-INF/maven/org.eclipse.jgit/org.eclipse.jgit.ssh.jsch/pom.prop
+ erties
+SHA-256-Digest: 2ASKAbTxVgZCT61LAJa8BBqDPpoh41fCmmH5Gk2f9P0=
+
+Name: org/eclipse/jgit/internal/transport/ssh/jsch/JSchText.class
+SHA-256-Digest: gE5tO0/FZ3eUE11UIR74JEKcJm43BfcgNJEqdC9pTIs=
+
+Name: org/eclipse/jgit/transport/ssh/jsch/JschConfigSessionFactory.class
+SHA-256-Digest: BxyMxfdrh1J5RpFeFdYUWKT9xEpPHRHAf2VHYPiQsCQ=
+
+Name: META-INF/services/org.eclipse.jgit.transport.SshSessionFactory
+SHA-256-Digest: 2kwao68HNvjSFd6GY23XQChG9CVVzSqxd8CXeV+gIf4=
+
+Name: META-INF/maven/org.eclipse.jgit/org.eclipse.jgit.ssh.jsch/pom.xml
+SHA-256-Digest: +IGht4zk1lrj+yLZyeWC99sFDdkv/29bLc/FdnJ+g9U=
+
+Name: org/eclipse/jgit/transport/ssh/jsch/OpenSshConfig.class
+SHA-256-Digest: ANUD6MGrjE7wqFt/CpHRBzBz+L8WngyuCAkxpZPSqeo=
+
+Name: org/eclipse/jgit/transport/ssh/jsch/JschSession.class
+SHA-256-Digest: BeXVGHZACqgf9u2Se6DhJBa3F56WUoQI5F/h6vtfnDc=
+
+Name: org/eclipse/jgit/transport/ssh/jsch/JschConfigSessionFactory$JschB
+ ugFixingConfigRepository$JschBugFixingConfig.class
+SHA-256-Digest: XDS0X/1/+8XHvU8veCEg+lN7nTtatMLzY31JGWVDaos=
+
+Name: org/eclipse/jgit/transport/ssh/jsch/OpenSshConfig$Host$1.class
+SHA-256-Digest: RYOJAjIY6+OivbBBljqkjalFsgIAw2QCPQwABPWjIDY=
+
+Name: plugin.properties
+SHA-256-Digest: eH9UrshRZnyXmuqKjGmR9U5k+k2ZqEcWBX6j6fSkStA=
+
+Name: org/eclipse/jgit/transport/ssh/jsch/JschSession$JschFtpChannel.cla
+ ss
+SHA-256-Digest: QLET45ECdWeXYTQp6jUGnwXDpaK2j9DiYt7iSEES4iY=
+
+Name: org/eclipse/jgit/internal/transport/ssh/jsch/JSchText.properties
+SHA-256-Digest: dV/HhU2w8bfKm1kBRSOWTnzH/1LGT1ASbiiw3BY5QqA=
+

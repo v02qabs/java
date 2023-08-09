@@ -1,0 +1,90 @@
+Manifest-Version: 1.0
+Created-By: Maven JAR Plugin 3.3.0
+Build-Jdk-Spec: 17
+Implementation-Title: JGit org.eclipse.jgit.ssh.jsch
+Implementation-Vendor: Eclipse.org - JGit
+Implementation-Vendor-Id: org.eclipse.jgit
+Implementation-Vendor-URL: https://www.eclipse.org/jgit/
+Implementation-Version: 6.6.0.202305301015-r
+Bundle-ManifestVersion: 2
+Bundle-Name: %Bundle-Name
+Automatic-Module-Name: org.eclipse.jgit.ssh.jsch
+Bundle-SymbolicName: org.eclipse.jgit.ssh.jsch;singleton:=true
+Fragment-Host: org.eclipse.jgit;bundle-version="[6.6.0,6.7.0)"
+Bundle-Vendor: %Bundle-Vendor
+Bundle-Localization: plugin
+Bundle-ActivationPolicy: lazy
+Bundle-Version: 6.6.0.202305301015-r
+Bundle-RequiredExecutionEnvironment: JavaSE-11
+Export-Package: org.eclipse.jgit.transport.ssh.jsch;version="6.6.0"
+Import-Package: com.jcraft.jsch;version="[0.1.37,0.2.0)",org.eclipse.jgi
+ t.errors;version="[6.6.0,6.7.0)",org.eclipse.jgit.internal;version="[6.
+ 6.0,6.7.0)",org.eclipse.jgit.internal.transport.ssh;version="[6.6.0,6.7
+ .0)",org.eclipse.jgit.nls;version="[6.6.0,6.7.0)",org.eclipse.jgit.tran
+ sport;version="[6.6.0,6.7.0)",org.eclipse.jgit.util;version="[6.6.0,6.7
+ .0)",org.eclipse.jgit.util.io;version="[6.6.0,6.7.0)",org.slf4j;version
+ ="[1.7.0,2.0.0)"
+
+Name: org/eclipse/jgit/internal/transport/ssh/jsch/CredentialsProviderUs
+ erInfo.class
+SHA-256-Digest: vsI9/3gkSQMbsgBf6Do0pCCGpzi7w5rnvE0Uxlb0vis=
+
+Name: about.html
+SHA-256-Digest: ZXo8gYXdWrHpmX9nWtO8x5yocknaCLEtQTghLSrnQmI=
+
+Name: org/eclipse/jgit/transport/ssh/jsch/OpenSshConfig$Host.class
+SHA-256-Digest: QKPp3wRAo/haES7KAE5MifoDDkvAfvs8T3XPmkKQua4=
+
+Name: org/eclipse/jgit/transport/ssh/jsch/JschSession$JschFtpChannel$2.c
+ lass
+SHA-256-Digest: SxpYkzs499mh8ZE5uo5Y9otAJw3IedjmENkwrkS+92c=
+
+Name: org/eclipse/jgit/transport/ssh/jsch/package-info.class
+SHA-256-Digest: caKYhutr333MaN5Iy+NjPQ2/70JF+GajjDai29TaLKo=
+
+Name: org/eclipse/jgit/transport/ssh/jsch/JschSession$JschProcess.class
+SHA-256-Digest: OMDt/Z7MhtZizAkg25IN7y/58SYAJciHDKpARYP1/oU=
+
+Name: org/eclipse/jgit/transport/ssh/jsch/JschConfigSessionFactory$JschB
+ ugFixingConfigRepository.class
+SHA-256-Digest: cWuhwdxKIJdCTdbYrPlztXV0LqvjP8dreaMT8QFUM0U=
+
+Name: META-INF/maven/org.eclipse.jgit/org.eclipse.jgit.ssh.jsch/pom.prop
+ erties
+SHA-256-Digest: zsOgloVX1M+J27IxuvoDS4pmJPfTdySI+4DwWUJIwSg=
+
+Name: org/eclipse/jgit/internal/transport/ssh/jsch/JSchText.class
+SHA-256-Digest: uVxMigbdHXEiRvoC/H3Ay8YZ0BXbKNtBaLziirRunZk=
+
+Name: org/eclipse/jgit/transport/ssh/jsch/JschConfigSessionFactory.class
+SHA-256-Digest: Ubfm8ChkH7vdXOpbengIpbK37Erk82CbxFeFWyRYZKA=
+
+Name: META-INF/services/org.eclipse.jgit.transport.SshSessionFactory
+SHA-256-Digest: xANqqNKxGjcfHk+84Y0uHb00+wzp3WcfoM/dkV8KNuM=
+
+Name: META-INF/maven/org.eclipse.jgit/org.eclipse.jgit.ssh.jsch/pom.xml
+SHA-256-Digest: OHwRXiILxH96GgPi/Oq9xIIYSf/oEspppE7EkvvN4Bw=
+
+Name: org/eclipse/jgit/transport/ssh/jsch/OpenSshConfig.class
+SHA-256-Digest: PFuTZy/nV5NeED/mdltRkEqlc55E7g8I2XfoE6ql+oc=
+
+Name: org/eclipse/jgit/transport/ssh/jsch/JschSession.class
+SHA-256-Digest: OkXrnGSYGCq4fW14uewBmZy7OpMalIGr2WR96KXMBkg=
+
+Name: org/eclipse/jgit/transport/ssh/jsch/JschConfigSessionFactory$JschB
+ ugFixingConfigRepository$JschBugFixingConfig.class
+SHA-256-Digest: BD6b7b30Z98q2DRJZHZDBFz9j52Xb7n4QOBBnogHLHk=
+
+Name: org/eclipse/jgit/transport/ssh/jsch/OpenSshConfig$Host$1.class
+SHA-256-Digest: i15KS9MT3qR1XSYFTDDuqF0ACw4GYDdQrq3ESVgAheg=
+
+Name: plugin.properties
+SHA-256-Digest: JE6F2B0QkUYK9ChQ4k+JWtxc1BDqmrw6uPaj/GjtVFw=
+
+Name: org/eclipse/jgit/transport/ssh/jsch/JschSession$JschFtpChannel.cla
+ ss
+SHA-256-Digest: qGfl8o+M2Ze8jUME/j72BFa+6fZ3/K42GQxATjT98lQ=
+
+Name: org/eclipse/jgit/internal/transport/ssh/jsch/JSchText.properties
+SHA-256-Digest: +00o6mUwhRCmWzRfCiLGVHS47ATctSA5cNu/pmDhpW8=
+

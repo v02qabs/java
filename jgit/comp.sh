@@ -1,1 +1,2 @@
-javac -cp ./:./jgit-core.jar:./jgit-jsch.jar: ./push-git.java
+
+javac -cp ./:comp,zip: ./push-git.java
