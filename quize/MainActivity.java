@@ -1,8 +1,8 @@
-import java.io.";
+import java.io.*;
 
 public class MainActivity
 {
-	public MainActivity&()
+	public MainActivity()
 	{
 		new readData();
 	}
