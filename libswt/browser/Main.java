@@ -15,7 +15,6 @@ public class Main
 				FormData browsData = new FormData();
 				browsData.top = new FormAttachment(1000,0);
 				browser.setLayoutData(browsData);
-				shell.pack();
 				shell.open();
 				
 				while(!shell.isDisposed())
