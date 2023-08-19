@@ -15,6 +15,9 @@ class readData
 		{
 			String korian_data = Files.readString(data_path);
 			System.out.println(korian_data);
+			new StringData(korian_data);
+			
+
 		}
 		catch(Exception error)
 		{
