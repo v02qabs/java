@@ -1,1 +1,0 @@
-javac -cp ./:./jgit.zip: ./push-git.java
