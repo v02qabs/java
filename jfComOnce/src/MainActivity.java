@@ -13,6 +13,10 @@ class Jftpg
 
 	public Jftpg()
 	{}
+	private static void read_local_dir(String dir)
+	{
+		new Jftpg().upload(new File(dir));
+	}
 
 	public static void main(String[] args)
 	{
@@ -21,22 +25,31 @@ class Jftpg
 				if(args[0].equals("add"))
 				{
 				System.out.println("第一引数：" + args[0]);
+				System.out.println("ファイルリストを登録します。");
+				System.out.println("登録されたディレクトリ&ファイル：" + args[1]);
+				new File("./.log.txt").delete();
+						
+				read_local_dir(args[1]);
 				}
 				if(args[0].equals("push"))	
 				{
 						System.out.println("サーバへファイルをアップロードします。");
 						
-						new Jftpg().zipping();
-			}
+						//new Jftpg().zipping();
+				
 				
 					if(args[1].equals("."))
 					{
 						System.out.println("第二引数: " + args[1]);
 						System.out.println("ディレクトリをプロジェクトに追加します。");
-												File ftop = new File(".");
+						File ftop = new File(".");
+						new File("./.log.txt").delete();
+		
 						new Jftpg().upload(ftop);
-						
+						new Jftpg().zipping();
 					}
+				
+				}
 					
 		}
 		catch(Exception error)
@@ -54,19 +67,20 @@ class Jftpg
     for( File file : files ) {
       if( !file.exists() )
         continue;
-      else if( file.isDirectory() )
-        upload( file );
+      
       else if( file.isFile() )
-        execute( file );
+	
+        FileWrite(file.getAbsolutePath());
     }
 }
 
 			
 
-				  public void execute( File file ) {
+ public void execute( File file ) {
     // ここにやりたい処理を書く
     //System.out.println( file.getPath() );
-    FileWrite(file.getPath());
+   		FileWrite(file.getName());
+	
   }
   private String getTime()
   {
@@ -78,13 +92,14 @@ class Jftpg
   
   private void FileWrite(String message)
   {
-  		System.out.println(message);
+  		System.out.println("c : " + message);
   		try
   		{
 						File write_log = new File("./.log.txt");
 						FileWriter fwriter = new FileWriter(write_log, true);
 						fwriter.write(message + "\n");
 						fwriter.close();
+						
 				}
 				catch(Exception error)
 				{
@@ -98,8 +113,27 @@ class Jftpg
 			System.out.println("zipping...");
 			Runtime r = Runtime.getRuntime();
 			r.exec("zip -r tmp.zip ./");
-			
-			fileUpping(hostname,user,password, "tmp.zip" ,rootdir);
+			String hostname,user,password, rootdir;
+			System.out.print("hostname: ");
+			BufferedReader br_hostname= new BufferedReader(new InputStreamReader(System.in));
+			hostname = br_hostname.readLine();
+			System.out.print("username: ");
+			BufferedReader br_user = new BufferedReader(new InputStreamReader(System.in));
+			user = br_user.readLine();
+			System.out.print("password: ");
+			BufferedReader br_password = new BufferedReader(new InputStreamReader(System.in));
+			password = br_password.readLine();
+			System.out.print("server dir: ");
+			BufferedReader br_rootdir = new BufferedReader(new InputStreamReader(System.in));
+			rootdir = br_rootdir.readLine();
+			BufferedReader br_upload_files = new BufferedReader(new FileReader(new File("./.log.txt")));
+			String line;
+			while((line = br_upload_files.readLine()) != null)
+			{
+				System.out.println("o: " + line);
+				File upload_file = new File(line);
+				fileUpping(hostname,user,password, line ,rootdir);
+			}
 		}
 		catch(Exception error)
 		{
@@ -114,7 +148,7 @@ class Jftpg
 			it.sauronsoftware.ftp4j.FTPClient client = new it.sauronsoftware.ftp4j.FTPClient();
 			client.connect(hostname);
 			client.login(user, password);
-			//client.setType(it.sauronsoftware.ftp4j.FTPClient.TYPE_BINARY);
+			client.setType(it.sauronsoftware.ftp4j.FTPClient.TYPE_BINARY);
 			File upfile = new File(uploadfiles);
 			client.changeDirectory(rootdir);
 			client.upload(upfile);
@@ -124,7 +158,7 @@ class Jftpg
 		}
 		catch(Exception error)
 		{
-			System.out.println(error.toString());
+			System.out.println("error: " + error.toString());
 		}
  
 	}
