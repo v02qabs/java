@@ -129,21 +129,8 @@ public class fchooser extends JFrame implements ListSelectionListener
 		}
 		//a = a+1;
 		Object obj = list1.getSelectedValue();
-		System.out.println("getpath : " + System.getProperty("user.dir") + obj.toString());
-		File dir_check = new File(System.getProperty("user.dir") + obj.toString());
-		if(dir_check.isFile())
-		{
-			System.out.println("this is file.");
-			
-		}
-		else
-		{
-			System.out.println("this is dir");
-			c = new counter();
-			c.write(dir_check.getName());
-		}
-
-	}
+		System.out.println("getpath : " + new File(obj.toString()).getAbsolutePath());
+	
 
 }
 

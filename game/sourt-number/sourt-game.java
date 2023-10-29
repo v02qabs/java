@@ -52,7 +52,9 @@ class starting_game extends Thread
 		System.out.println("game_num : " + game_num[1] + " " + game_num[3]);
 		try
 		{
-			Thread.sleep(1000L);
+			Thread.sleep(1000L);	
+			System.out.println("\033[H\033[2J");
+			System.out.print("input num: " );
 			Scanner anser_scanner = new Scanner(System.in);
 			String anser = anser_scanner.next();
 			if(anser.equals(game_num[1] + game_num[3]))
