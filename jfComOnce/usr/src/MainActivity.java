@@ -27,7 +27,6 @@ class Jftpg
 				System.out.println("第一引数：" + args[0]);
 				System.out.println("ファイルリストを登録します。");
 				System.out.println("登録されたディレクトリ&ファイル：" + args[1]);
-				new File("./.log.txt").delete();
 						
 				read_local_dir(args[1]);
 				}
@@ -35,20 +34,8 @@ class Jftpg
 				{
 						System.out.println("サーバへファイルをアップロードします。");
 						
-						//new Jftpg().zipping();
-				
-				
-					if(args[1].equals("."))
-					{
-						System.out.println("第二引数: " + args[1]);
-						System.out.println("ディレクトリをプロジェクトに追加します。");
-						File ftop = new File(".");
-						new File("./.log.txt").delete();
-		
-						new Jftpg().upload(ftop);
 						new Jftpg().zipping();
-					}
-				
+						//System.out.println(home_dir);
 				}
 					
 		}
@@ -82,6 +69,7 @@ class Jftpg
    		FileWrite(file.getName());
 	
   }
+  String home_dir = System.getProperty("user.home");
   private String getTime()
   {
   		System.out.print("ファイルアップロードを実行した時間：");
@@ -95,7 +83,7 @@ class Jftpg
   		System.out.println("c : " + message);
   		try
   		{
-						File write_log = new File("./.log.txt");
+						File write_log = new File(home_dir + "/log.txt");
 						FileWriter fwriter = new FileWriter(write_log, true);
 						fwriter.write(message + "\n");
 						fwriter.close();
@@ -108,11 +96,12 @@ class Jftpg
 		}
 	private void zipping()
 	{
+	System.out.println(home_dir);
 		try
 		{
 			System.out.println("zipping...");
-			Runtime r = Runtime.getRuntime();
-			r.exec("zip -r tmp.zip ./");
+			//Runtime r = Runtime.getRuntime();
+			//r.exec("zip -r tmp.zip ./");
 			String hostname,user,password, rootdir;
 			System.out.print("hostname: ");
 			BufferedReader br_hostname= new BufferedReader(new InputStreamReader(System.in));
@@ -126,7 +115,7 @@ class Jftpg
 			System.out.print("server dir: ");
 			BufferedReader br_rootdir = new BufferedReader(new InputStreamReader(System.in));
 			rootdir = br_rootdir.readLine();
-			BufferedReader br_upload_files = new BufferedReader(new FileReader(new File("./.log.txt")));
+			BufferedReader br_upload_files = new BufferedReader(new FileReader(new File(home_dir + "/log.txt")));
 			String line;
 			while((line = br_upload_files.readLine()) != null)
 			{
