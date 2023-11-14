@@ -1,0 +1,3 @@
+/media/sdb1/takesue090/java/jfComOnce/bin/./MainActivity.class
+/media/sdb1/takesue090/java/jfComOnce/bin/./Jftpg.class
+/media/sdb1/takesue090/java/jfComOnce/bin/./tmp.zip
