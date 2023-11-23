@@ -43,7 +43,6 @@ public class fchooser extends JFrame implements ListSelectionListener
 		list1 = new JList();
 		list1.addListSelectionListener(this);
 		model = new DefaultListModel();
-		model.addElement("..");
 		list1.setModel(model);
 		all_panel.add(list1);
 		layout = new GridLayout(1,0);
@@ -67,28 +66,23 @@ public class fchooser extends JFrame implements ListSelectionListener
 		File[] list = now.listFiles();
 		if(list == null)
 			return ;
-		
+		model.addElement("..");
 		for(File f : list)
 		{
 			if(f.isDirectory())
 			{
-				System.out.println("Dir : " + f.getName());
-				//Files(f.getAbsolutePath());
-				//Files(f.getPath());
-				JList list2 = new JList();
-				list1.addListSelectionListener(this);
-				model.addElement(f.getName().toString());
-				list2.setModel(model);
+				System.out.println("[e] : " + f.getAbsolutePath());
+				model.addElement(f.getAbsolutePath());
+				list1.setModel(model);
+				
+				
 			}
-			else
-			{
-				System.out.println("File " + f.getName());
-				//model = new DefaultListModel();
-				model.addElement(f.getName().toString());
-				JList list1 = new JList();
-				//list.addElement(f.getName());
+			else{
+				System.out.println("[f] : " + f.getAbsolutePath());
+				model.addElement(f.getAbsolutePath());
 				list1.setModel(model);
 			}
+
 		}
 	}
 	private String Object;
@@ -102,22 +96,6 @@ public class fchooser extends JFrame implements ListSelectionListener
 		return this.Object;
 	}
 
-	private boolean checkobj(String objs)
-	{
-		setString(objs);
-		if(getString() != null)
-		{
-			System.out.println("written");
-				
-			return true;
-		}
-		else
-		{
-			System.out.println("no written");
-		}
-		return false;
-	}
-
 	private int a=0;
 	private String[] dirpp = new String[100];
 	@Override
@@ -125,12 +103,26 @@ public class fchooser extends JFrame implements ListSelectionListener
 	{
 		if(e.getValueIsAdjusting())
 		{
-			return ;
+			try
+		{
+			System.out.println("ok.");
+			System.out.println("get selection : " + list1.getSelectedValue());
+			File f = new File(list1.getSelectedValue().toString());
+			if(f.isDirectory()){
+				System.out.println("is dir.");
+				model.clear();
+				repaint();
+				Files(f.getAbsolutePath());
+			}else if(f.isFile())
+			{
+			}
 		}
-		//a = a+1;
-		Object obj = list1.getSelectedValue();
-		System.out.println("getpath : " + new File(obj.toString()).getAbsolutePath());
-	
+		catch(Exception error)
+		{}
+		}
 
+
+	
+	}
 }
 
