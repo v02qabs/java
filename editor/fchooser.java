@@ -66,7 +66,9 @@ public class fchooser extends JFrame implements ListSelectionListener
 		File[] list = now.listFiles();
 		if(list == null)
 			return ;
-		model.addElement("..");
+		System.setProperty("user.dir","/home/takesue090");
+		model.addElement(new File(path).getAbsolutePath() + "/..");
+		
 		for(File f : list)
 		{
 			if(f.isDirectory())
