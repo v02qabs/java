@@ -9,6 +9,8 @@ class testMain{
 	public testMain(){
 		jhiroclibg clib = new jhiroclibg();
 		clib.clear();
+		System.out.println(clib.blue);
+		System.out.println("blue " + clib.blue);
 	}
 }
 
