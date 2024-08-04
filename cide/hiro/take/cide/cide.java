@@ -28,7 +28,7 @@ public class cide extends Frame{
 	private TextArea textArea;
 
 	public static void main(String[] args) {
-		// TODO ©“®¶¬‚³‚ê‚½ƒƒ\ƒbƒhEƒXƒ^ƒu
+		// TODO è‡ªå‹•ç”Ÿæˆã•ã‚ŒãŸãƒ¡ã‚½ãƒƒãƒ‰ãƒ»ã‚¹ã‚¿ãƒ–
 
 		cide ci = new cide();
 		ci.setBounds(0,0,500,500);
@@ -39,7 +39,7 @@ public class cide extends Frame{
 			@Override
 			public void windowClosing(WindowEvent e)
 			{
-				//System.out.println("I—¹B");
+				//System.out.println("çµ‚äº†ã€‚");
 				System.exit(0);
 			}
 		});
@@ -59,7 +59,7 @@ public class cide extends Frame{
 		 			String line = br.readLine();
 		 			if (line == null) break;
 		 			textArea.setText("");
-		 			textArea.append(line + "\n");
+		 			textArea.append(line + "Â¥n");
 
 			 	}
 			} finally
@@ -72,28 +72,28 @@ public class cide extends Frame{
 	{
 		panel = new Panel();
 		panel.setLayout(null);
-		label1 = new Label("ƒ\[ƒXƒR[ƒh‚ÌêŠ");
+		label1 = new Label("ã‚½ãƒ¼ã‚¹ã‚³ãƒ¼ãƒ‰ã®å ´æ‰€");
 		label1.setBounds(0,0,200,30);
-		label2 = new Label("Àsƒtƒ@ƒCƒ‹‚Ìì¬æ");
+		label2 = new Label("å®Ÿè¡Œãƒ•ã‚¡ã‚¤ãƒ«ã®ä½œæˆå…ˆ");
 		label2.setBounds(0, 31, 200, 30);
 		field1 = new TextField();
 		field1.setBounds(210, 0, 200, 30);
 		field2 = new TextField();
 		field2.setBounds(210, 31, 200, 30);
 
-		comp_button = new Button("ƒrƒ‹ƒh");
+		comp_button = new Button("ãƒ“ãƒ«ãƒ‰");
 		comp_button.setBounds(0,31*3 ,100,30);
 		comp_button.addActionListener(new ActionListener()
 				{
 
 					@Override
 					public void actionPerformed(ActionEvent arg0) {
-						// TODO ©“®¶¬‚³‚ê‚½ƒƒ\ƒbƒhEƒXƒ^ƒu
+						// TODO è‡ªå‹•ç”Ÿæˆã•ã‚ŒãŸãƒ¡ã‚½ãƒƒãƒ‰ãƒ»ã‚¹ã‚¿ãƒ–
 						gcc();
 					}
 
 				});
-		debug_button = new Button("Às");
+		debug_button = new Button("å®Ÿè¡Œ");
 		debug_button.setBounds(110,31*4,100,30);
 		debug_button.addActionListener(new ActionListener()
 		{
@@ -105,7 +105,7 @@ public class cide extends Frame{
 		});
 
 		textArea = new TextArea();
-		textArea.setText("ƒRƒ“ƒ\[ƒ‹");
+		textArea.setText("ã‚³ãƒ³ã‚½ãƒ¼ãƒ«");
 		textArea.setBounds(0,31*5,200,200);
 
 
@@ -131,24 +131,24 @@ public class cide extends Frame{
 			//String work = "e:/msys2/home/takes/hello/hello.c";
 			String hello = field1.getText().toString();
 			String outhello = field2.getText().toString();
-			process = r.exec("cmd.exe /c start " + outhello);
+			process = r.exec("./" + outhello);
 			//process = r.exec(outhello);
 
 			process.waitFor();
 			InputStream is = process.getInputStream();
-			 //•W€o—Í
+			 //æ¨™æº–å‡ºåŠ›
 			 printInputStream(is);
 
 			 InputStream es = process.getErrorStream();
-			  //•W€ƒGƒ‰[
+			  //æ¨™æº–ã‚¨ãƒ©ãƒ¼
 			  printInputStream(es);
 
 
 		} catch (Exception e) {
-			// TODO ©“®¶¬‚³‚ê‚½ catch ƒuƒƒbƒN
+			// TODO è‡ªå‹•ç”Ÿæˆã•ã‚ŒãŸ catch ãƒ–ãƒ­ãƒƒã‚¯
 			e.printStackTrace();
 		}
-		//Process‚Ìg‚¢•û‚ÍŒãq
+		//Processã®ä½¿ã„æ–¹ã¯å¾Œè¿°
 
 	}
 
@@ -166,19 +166,19 @@ public class cide extends Frame{
 
 			process.waitFor();
 			InputStream is = process.getInputStream();
-			 //•W€o—Í
+			 //æ¨™æº–å‡ºåŠ›
 			 printInputStream(is);
 
 			 InputStream es = process.getErrorStream();
-			  //•W€ƒGƒ‰[
+			  //æ¨™æº–ã‚¨ãƒ©ãƒ¼
 			  printInputStream(es);
 
 
 		} catch (Exception e) {
-			// TODO ©“®¶¬‚³‚ê‚½ catch ƒuƒƒbƒN
+			// TODO è‡ªå‹•ç”Ÿæˆã•ã‚ŒãŸ catch ãƒ–ãƒ­ãƒƒã‚¯
 			e.printStackTrace();
 		}
-		//Process‚Ìg‚¢•û‚ÍŒãq
+		//Processã®ä½¿ã„æ–¹ã¯å¾Œè¿°
 	}
 
 }
