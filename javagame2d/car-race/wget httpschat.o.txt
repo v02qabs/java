@@ -1,0 +1,1 @@
+wget "https://chat.openai.com/share/ea2e8a7c-5e3b-48f8-b52a-42a1b9b4b6de" -O course.png
